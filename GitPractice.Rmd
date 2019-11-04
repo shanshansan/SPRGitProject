@@ -19,7 +19,7 @@ powers <- read_csv("powers.csv")
 
 ## Introduction
 
-As a group, pick one or two of the following questions to explore. Each question has at leat 2 sub-questions. 
+As a group, pick one or two of the following questions to explore. Each question has at least 2 sub-questions. 
 
 After you answer each sub-question, save and commit your changes (I recommend knitting at this point to make sure your code runs). At the end of each larger question, push your changes to GitHub and verify that your project on GitHub updated.
 
@@ -40,7 +40,10 @@ To answer this question, you will need to:
 Filter the heroes data to only include Marvel or DC. You can also eliminate the DC version of Captain Marvel.
 
 ```{r}
+head(heroes)
 
+big_bois <- heroes %>%
+  filter(Publisher=="Marvel Comics" | Publisher=="DC Comics")
 ```
 
 
@@ -49,7 +52,11 @@ Filter the heroes data to only include Marvel or DC. You can also eliminate the 
 Create a new variable called "num_powers" in the powers data set counting the number of powers each character has. (This is tricky; there are multiple ways to approach this. You may want to play with the rowSums() function, or see Boern's answer [here](https://stackoverflow.com/questions/28873057/sum-across-multiple-columns-with-dplyr)).
 
 ```{r}
+head(powers)
 
+?rowSums
+
+num_powers <-
 ```
 
 
