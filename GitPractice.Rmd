@@ -43,7 +43,13 @@ Filter the heroes data to only include Marvel or DC. You can also eliminate the 
 head(heroes)
 
 big_bois <- heroes %>%
-  filter(Publisher=="Marvel Comics" | Publisher=="DC Comics")
+  filter(Publisher=="Marvel Comics" | Publisher=="DC Comics") %>%
+  filter(!(Publisher=="DC Comics" & name=="Captain Marvel"))
+
+checkheck <- big_bois %>%
+  filter (Publisher=="DC Comics" & name=="Captain Marvel")
+
+head(checkheck)
 ```
 
 
@@ -56,7 +62,7 @@ head(powers)
 
 ?rowSums
 
-num_powers <-
+num_powers <- rowSums()
 ```
 
 
